@@ -36,7 +36,7 @@ Guidelines:
 
 def get_user_prompt(job_description, resume, action_verbs):
     return f"""
-Use the information below to generate a one-page resume in valid HTML (no code blocks). The final output must retain the detail and achievements found in the original resume while aligning with the job description. Each bullet point should reflect the STAR (Situation, Task, Action, Result) approach without explicitly mentioning “STAR.” Ensure you incorporate the candidate's entire skill set and any relevant details. Make the resume engaging yet concise, maintaining a professional tone.
+Use the information below to generate a one-page resume in valid HTML (no code blocks). The final output must retain the detail and achievements found in the original resume while aligning with the job description. Each bullet point should reflect the STAR (Situation, Task, Action, Result) approach without explicitly mentioning “STAR.” Ensure you incorporate the candidate's entire skill set and any relevant details. Make the resume engaging, detailed, and maintaining a professional tone.
 
 Here is the job description:
 {job_description}
@@ -69,9 +69,9 @@ Here are the action verbs with their categories:
    - Keep each Experience entry to a maximum of 6-8 bullet points. If the candidate's original content exceeds this, consolidate carefully while preserving key details.
    - Limit Projects to a maximum of 6 bullet points each, retaining vital technical details and impacts.
 
-5. <strong>Conciseness & Clarity</strong>:
+5. <strong>Clarity</strong>:
    - Ensure the resume fits on one page when rendered in typical resume format.
-   - Keep each bullet point concise yet impactful. 
+   - Keep each bullet point detailed and impactful. 
    - Avoid filler words, jargon, or repeated statements. 
    - Use parallel structure across bullet points.
 
