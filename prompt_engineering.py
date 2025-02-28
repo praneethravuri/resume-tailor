@@ -36,12 +36,12 @@ Guidelines:
 
 def get_user_prompt(job_description, resume, action_verbs):
     return f"""
-Use the information below to generate a one-page resume in valid HTML (no code blocks). The final output must retain the detail and achievements found in the original resume while aligning with the job description. Each bullet point should reflect the STAR (Situation, Task, Action, Result) approach without explicitly mentioning “STAR.” Ensure you incorporate the candidate's entire skill set and any relevant details. Make the resume engaging, detailed, and maintaining a professional tone.
+Use the information below to generate a one-page resume in valid HTML (no code blocks). The final output must retain the detail and achievements found in the original resume while aligning with the job description. Each bullet point should reflect the STAR (Situation, Task, Action, Result) approach without explicitly mentioning “STAR.” Ensure you incorporate the candidate's entire skill set and any relevant details. Make the resume engaging, detailed, and maintaining a professional tone. You must rewrite each bullet point and add more bullet points if needed to match the job description but within limits. The bullet points should be as detailed as possible and include metrics, tools, non-technical keywords like (cross-functional, user-centric, user-centered, business intelligence, data integrity, data integration, user experience, agile, jira, etc), technical keywords like (microservices, serverless, distributed systems, debugging, code review, system design) and outcomes where applicable. Remember, keywords are what make the resume stand out and get past the ATS. So try to include as many as possible without stuffing them. Make sure the bullet points generated have meaningful quantifying metrics.
 
 Here is the job description:
 {job_description}
 
-Here is my resume (written with considerable detail using STAR methodology):
+Here is my resume:
 {json.dumps(resume, indent=2)}
 
 Here are the action verbs with their categories:
