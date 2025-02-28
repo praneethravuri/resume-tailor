@@ -10,7 +10,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 model_name = "gpt-4o"  # or your chosen model
 temperature = 0.7
-max_tokens = 2000  # Increase if necessary for complete output
+max_tokens = 10000
 
 def call_openai_api(system_prompt, user_prompt):
     messages = [
@@ -43,6 +43,11 @@ with open("job_description.txt", "r") as f:
 # Build the system and user prompts
 system_prompt = get_system_prompt()
 user_prompt = get_user_prompt(job_description, resume, action_verbs)
+
+print("System Prompt:")
+print(system_prompt)
+print("\nUser Prompt:")
+print(user_prompt)
 
 # Call the API with the system and user prompts
 final_output = call_openai_api(system_prompt, user_prompt)
