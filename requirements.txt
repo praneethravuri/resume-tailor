@@ -1,0 +1,8 @@
+pdfkit
+wkhtmltopdf
+python-dotenv
+openai
+xhtml2pdf
+pyppeteer
+WeasyPrint
+pyhtml2pdf
