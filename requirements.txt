@@ -20,3 +20,6 @@ python-dotenv
 # Web utilities (optional, for potential future enhancements)
 # beautifulsoup4
 # requests
+pdflatex
+pylatex
+weasyprint

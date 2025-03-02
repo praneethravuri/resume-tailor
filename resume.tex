@@ -1,0 +1,158 @@
+
+% Praneeth Ravuri Resume
+% Converted from HTML to LaTeX - Condensed to fit on one page
+
+\documentclass[10pt,a4paper]{article}
+
+% Set custom font size (10.5pt)
+\usepackage{anyfontsize}
+\renewcommand{\normalsize}{\fontsize{10.75pt}{12.6pt}\selectfont}
+
+% Packages
+\usepackage[margin=0.25in]{geometry} % Reduced margins
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{linkcolor}{rgb}{0,0,1}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkcolor,
+    linkcolor=linkcolor
+}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.3em} % Reduced paragraph spacing
+
+% Section title format with reduced spacing
+\titleformat{\section}
+{\normalfont\large\bfseries}
+{}
+{0em}
+{}[{\titlerule}]
+
+% Reduce spacing before and after section titles
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+% Custom commands for header and sections
+\newcommand{\dateplace}[2]{\raggedleft #1 \\ #2 \par}
+\newcommand{\role}[2]{\raggedright \textbf{#1} \\ #2 \par}
+
+% Reduce itemize spacing
+\setlist[itemize]{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*}
+
+\begin{document}
+
+% Header
+\begin{center}
+    \textbf{\Large Praneeth Ravuri}\\
+    \vspace{0.2em}
+    571-622-8648 $|$
+    \href{mailto:pravdevrav@gmail.com}{ pravdevrav@gmail.com } $|$
+    \href{https://praneethravuri.com}{praneethravuri.com} $|$
+    \href{https://www.linkedin.com/linkedin.com/prav25}{linkedin.com/linkedin.com/prav25} $|$
+    \href{https://www.github.com/github.com/praneethravuri}{github.com/github.com/praneethravuri} $|$
+    Richardson, TX
+\end{center}
+\vspace{-0.3em}
+
+% Education Section
+\section*{Education}
+\vspace{0.5em}
+
+\begin{minipage}[t]{0.70\textwidth}
+    \role{George Mason University}{Master of Science in Computer Science\\Data Analytics, Machine Learning, Distributed Systems}
+\end{minipage}
+\begin{minipage}[t]{0.29\textwidth}
+    \dateplace{Fairfax, VA}{Aug 2022 -- May 2024}
+\end{minipage}
+\vspace{0.5em}
+
+
+\begin{minipage}[t]{0.70\textwidth}
+    \role{Gokaraju Rangaraju Institute of Engineering & Technology}{Bachelor of Technology in Computer Science\\Cybersecurity, Software Testing, Cloud Computing, Object-Oriented Programming}
+\end{minipage}
+\begin{minipage}[t]{0.29\textwidth}
+    \dateplace{Hyderabad, India}{Jun 2018 -- May 2022}
+\end{minipage}
+\vspace{0.5em}
+
+
+% Experience Section
+\section*{Experience}
+\vspace{0.5em}
+
+\begin{minipage}[t]{0.70\textwidth}
+    \role{Prodapt}{Software Engineer}
+\end{minipage}
+\begin{minipage}[t]{0.29\textwidth}
+    \dateplace{Richardson, TX}{Oct 2024 -- Present}
+\end{minipage}
+\vspace{0em}
+\begin{itemize}
+
+    \item Architected high-throughput data pipelines using Golang, processing metrics from 5,000+ devices and enhancing network monitoring.
+    \item Configured custom decoders for 170+ device metrics, ensuring consistency across network data.
+    \item Automated error recovery with Python scripts, minimizing downtime during critical failures.
+    \item Built unit and integration tests to manage 1M+ JSON objects/hour, ensuring pipeline reliability.
+    \item Optimized database operations with MongoDB and BigQuery, reducing write latency significantly.
+    \item Streamlined CI/CD workflows with Jenkins, elevating deployment efficiency.
+\end{itemize}
+\vspace{0.5em}
+
+
+\begin{minipage}[t]{0.70\textwidth}
+    \role{Cognizant}{Software Engineer Intern}
+\end{minipage}
+\begin{minipage}[t]{0.29\textwidth}
+    \dateplace{Hyderabad, India}{Jan 2022 -- Jun 2022}
+\end{minipage}
+\vspace{0em}
+\begin{itemize}
+
+    \item Developed a WebSocket-based real-time messaging platform for 500+ users, enabling seamless communication.
+    \item Enhanced RESTful API performance with Redis, achieving message delivery times below 50 ms.
+    \item Containerized and deployed 10 microservices using Docker and Kubernetes, orchestrated through AWS.
+    \item Integrated OAuth 2.0 for user authentication, reducing unauthorized access attempts.
+\end{itemize}
+\vspace{0.5em}
+
+
+% Skills Section
+\section*{Skills}
+\vspace{0.5em}
+\begin{{itemize}}
+    \item \textbf{Programming Languages:} Python, Golang, JavaScript/TypeScript, C/C++, Bash
+    \item \textbf{Web Technologies:} React, Next.js, HTML/CSS, Tailwind CSS, FastAPI, Node.js, Express.js
+    \item \textbf{Databases:} MySQL, MongoDB, Redis, Pinecone
+    \item \textbf{Machine Learning:} Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, Matplotlib, NLP
+    \item \textbf{DevOps and Cloud:} Docker, Kubernetes, AWS Lambda, EC2, Jenkins, Vercel, GCP BigQuery, Terraform, Git, GitHub, GitHub Actions
+    \item \textbf{Methodologies:} Agile/Scrum, Test-Driven Development (TDD), SDLC
+\end{itemize}
+
+% Projects Section
+\section*{Projects}
+\vspace{0.5em}
+\textbf{Retrieval Augmented Generation Document Assistant}
+\vspace{{0.5em}}
+\begin{{itemize}}
+    \item Enhanced document retrieval accuracy by 40\% using a hybrid search RAG system in FastAPI, achieving sub-100 ms query performance.
+    \item Constructed reusable UI components with Next.js and Tailwind CSS, improving user feedback.
+    \item Reduced deployment time by 60\% by containerizing the application and implementing CI/CD with GitHub Actions.
+    \item Implemented an IaC solution with Terraform on AWS, provisioning 20+ EC2 instances and ensuring secure data storage with zero downtime.
+\end{itemize}
+\vspace{{0.5em}}
+\textbf{Smart Traffic Management System}
+\vspace{{0.5em}}
+\begin{{itemize}}
+    \item Implemented a reinforcement learning algorithm for traffic light optimization, reducing vehicle congestion by 50\%.
+    \item Engineered a simulation environment with Python and Pygame, accurately modeling traffic patterns.
+    \item Designed a reward calculation system evaluating traffic efficiency, achieving optimal decision-making through extensive training.
+    \item Conducted comparative analysis of learning parameters, implementing an epsilon decay mechanism for policy enhancement.
+\end{itemize}
+\vspace{{0.5em}}
+
+\end{document}

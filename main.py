@@ -3,7 +3,7 @@ import json
 from openai import OpenAI
 from dotenv import load_dotenv
 from prompt_engineering import get_system_prompt, get_user_prompt
-from json_to_html_converter import json_to_html_converter
+from json_to_pdf_converter import json_to_pdf_converter
 
 # Load environment variables
 load_dotenv()
@@ -70,7 +70,7 @@ def main():
         print("Response:", llm_response)
         print("Error details:", e)
         
-    json_to_html_converter()
+    json_to_pdf_converter()
 
 if __name__ == "__main__":
     main()
