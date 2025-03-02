@@ -1,8 +1,22 @@
-pdfkit
-wkhtmltopdf
-python-dotenv
+# Core NLP libraries
+# nltk
+# keybert
+# rake-nltk
+# gensim
+
+# Machine learning
+# scikit-learn
+# pandas
+# numpy
+
+# OpenAI integration
 openai
-xhtml2pdf
-pyppeteer
-WeasyPrint
-pyhtml2pdf
+
+# Utility packages
+python-dotenv
+# transformers
+# sentence-transformers
+
+# Web utilities (optional, for potential future enhancements)
+# beautifulsoup4
+# requests
