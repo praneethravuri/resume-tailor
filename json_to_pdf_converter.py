@@ -1,5 +1,5 @@
 import json
-from pdflatex import PDFLaTeX
+import subprocess
 
 # Updated LaTeX template with escaped curly braces for literals
 latex_template = r"""
@@ -89,7 +89,6 @@ latex_template = r"""
 def generate_education_section(education_list):
     sections = []
     for edu in education_list:
-        # Use two minipages for each education entry
         edu_entry = r"""
 \begin{{minipage}}[t]{{0.70\textwidth}}
     \role{{{institution}}}{{{degree}\\{coursework}}}
@@ -126,7 +125,6 @@ def generate_experience_section(experience_list):
             location=exp.get('location', ''),
             dates=exp.get('dates', '').replace("&ndash;", "--")
         )
-        # Add each bullet point
         for point in exp.get('points', []):
             safe_point = point.replace("%", "\\%")
             exp_entry += "\n    \\item " + safe_point
@@ -201,12 +199,19 @@ def json_to_pdf_converter():
     
     print("LaTeX resume generated as 'resume.tex'")
     
-    pdfl = PDFLaTeX.from_texfile("resume.tex")
-    pdf, log, completed = pdfl.create_pdf(keep_pdf_file=True, keep_log_file=False)
-    if completed:
+    # Use subprocess to call the pdflatex command
+    try:
+        # Run pdflatex command with nonstop mode to avoid user interaction on errors.
+        result = subprocess.run(
+            ["pdflatex", "-interaction=nonstopmode", "resume.tex"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=True
+        )
         print("PDF generated successfully as 'resume.pdf'")
-    else:
-        print("PDF generation failed.")
+    except subprocess.CalledProcessError as e:
+        print(f"PDF generation failed: {e}")
+        print(e.stderr.decode())
 
 if __name__ == "__main__":
     json_to_pdf_converter()

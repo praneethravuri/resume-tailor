@@ -174,3 +174,7 @@ resume.json
 *.html
 *.txt
 enhanced_resume.json
+repomix-output.txt
+*.pdf
+*.out
+*.tex
